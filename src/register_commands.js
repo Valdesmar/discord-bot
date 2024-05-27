@@ -1,5 +1,7 @@
-require('dotenv').config();
-const { REST, Routes } = require('discord.js');
+import { REST, Routes } from "discord.js";
+import { config } from "dotenv";
+
+config();
 
 const commands = [
     {
@@ -10,6 +12,18 @@ const commands = [
                 name: 'city',
                 type: 3, // STRING type
                 description: 'The city name to get weather information for',
+                required: true,
+            },
+        ],
+    },
+    {
+        name: 'play',
+        description: 'Play a YouTube video in a voice channel',
+        options: [
+            {
+                name: 'url',
+                type: 3,
+                description: 'The url to play the desired sound',
                 required: true,
             },
         ],
