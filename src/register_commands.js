@@ -28,6 +28,10 @@ const commands = [
             },
         ],
     },
+    {
+        name: 'help',
+        description: 'Display all the commands and what they do',
+    },
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.BOT_DISCORD_TOKEN);

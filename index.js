@@ -1,9 +1,9 @@
 import { config } from 'dotenv';
 import { Client, GatewayIntentBits } from 'discord.js';
-// import ytdl from 'ytdl-core';
 
 import handleSoundPlayer from './src/command_actions/music.js';
 import handleWeatherCommand from './src/command_actions/weather.js';
+import help from './src/command_actions/help.js';
 
 config();
 
@@ -34,6 +34,10 @@ client.on('messageCreate', (msg) => {
 client.on('interactionCreate', async (interaction) => {
     if (!interaction.isChatInputCommand()) {
         return;
+    }
+
+    if (interaction.commandName === 'help') {
+        help(interaction);
     }
 
     if (interaction.commandName === 'weather') {
