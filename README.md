@@ -47,6 +47,10 @@ This project is a Discord bot that can play music from YouTube and provide weath
 - `src/command_actions/music.js`: Handles the /play command to play music from YouTube.
 - `src/command_actions/weather.js`: Handles the /weather command to provide weather information.
 ## Command Details
+`/help`
+- Display and explain all the commands that are avaible.
+- Usage example: `/help`
+
 `/play <YouTube URL>`
 - Plays the audio from the provided YouTube URL in the voice channel.
 - Usage example: `/play https://www.youtube.com/watch?v=dQw4w9WgXcQ`
